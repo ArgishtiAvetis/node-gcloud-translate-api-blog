@@ -1,0 +1,11 @@
+<% include partials/header.ejs %>
+
+	<h1>Add post</h1>
+	
+	<form action="/add-post" method="post">
+		<input type="text" name="title" /><br />
+		<textarea name="body" rows="4"></textarea><br />
+		<button type="submit">Add post</button>
+	</form>
+
+<% include partials/footer.ejs %>

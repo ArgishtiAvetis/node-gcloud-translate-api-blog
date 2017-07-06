@@ -1,0 +1,49 @@
+<% include partials/header.ejs %>
+
+	<h1>Techies</h1>
+	<p><b>All Posts</b></p>
+
+	<ul>
+		
+	</ul>
+
+	  <div class="row">
+	  	<% for (let i = 0, len = posts.length; i < len; i++) { %>
+			<div class="col s12 m4 l3">
+	          <div class="card">
+	            <a href="/p/<%= posts[i].slug %>"><div class="card-image">
+	              <img src="http://materializecss.com/images/sample-1.jpg">
+	              <span class="card-title"><%= posts[i].title %></span>
+	            </div></a>
+	            <div class="card-content">
+	              <p>I am a very simple card. I am good at containing small bits of information.
+	              I am convenient because I require little markup to use effectively.</p>
+	            </div>
+	            <div class="card-action right-align">
+	              <a href="/p/<%= posts[i].slug %>">Continue Reading</a>
+	            </div>
+	          </div>
+	        </div>
+		<%	} %>
+		<% for (let i = 0, len = posts.length; i < len; i++) { %>
+			<div class="col s12 m4 l3">
+	          <div class="card">
+	            <a href="/p/<%= posts[i].slug %>"><div class="card-image">
+	              <img src="http://materializecss.com/images/sample-1.jpg">
+	              <span class="card-title"><%= posts[i].title %></span>
+	            </div></a>
+	            <div class="card-content">
+	              <p>I am a very simple card. I am good at containing small bits of information.
+	              I am convenient because I require little markup to use effectively.</p>
+	            </div>
+	            <div class="card-action right-align">
+	              <a href="/p/<%= posts[i].slug %>">Continue Reading</a>
+	            </div>
+	          </div>
+	        </div>
+		<%	} %>
+     
+      </div>
+            
+
+<% include partials/footer.ejs %>
