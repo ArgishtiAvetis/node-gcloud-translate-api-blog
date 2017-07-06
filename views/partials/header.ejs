@@ -3,25 +3,63 @@
 <head>
 	<title>App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="/css/materialize.css" />
 </head>
 <body>
 
-<nav class="blue accent-3">
+<nav class="white">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="/" class="brand-logo">
+        <img src="https://static1.squarespace.com/static/57764ef78419c2a6d6ac5ace/t/5915f68e725e25353cf564ce/1494611603680/the+guardian.jpg" style="margin-top: 0px"  alt="" class="">
+      </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a href="/">News</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Coding Tutorials<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/">Technology</a></li>
+        <li><a href="/">Online Business</a></li>
       </ul>
+
+      <!-- Dropdown Structure -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="/">HTML</a></li>
+        <li><a href="/">CSS</a></li>
+        <li><a href="/">SASS</a></li>
+        <li><a href="/">BOOTSTRAP</a></li>
+        <li><a href="/">Javascript</a></li>
+        <li><a href="/">ReactJS</a></li>
+        <li class="divider"></li>
+        <li><a href="/">C</a></li>
+        <li><a href="/">NodeJS</a></li>
+        <li><a href="/">Socket.IO</a></li>
+        <li><a href="/">PHP</a></li>
+        <li><a href="/">Laravel</a></li>
+        <li><a href="/">MySQL</a></li>
+      </ul>
+
+      <!-- Dropdown Structure -->
+      <ul id="dropdown2" class="dropdown-content">
+        <li><a href="/">HTML</a></li>
+        <li><a href="/">CSS</a></li>
+        <li><a href="/">SASS</a></li>
+        <li><a href="/">BOOTSTRAP</a></li>
+        <li><a href="/">Javascript</a></li>
+        <li><a href="/">ReactJS</a></li>
+        <li class="divider"></li>
+        <li><a href="/">C</a></li>
+        <li><a href="/">NodeJS</a></li>
+        <li><a href="/">Socket.IO</a></li>
+        <li><a href="/">PHP</a></li>
+        <li><a href="/">Laravel</a></li>
+        <li><a href="/">MySQL</a></li>
+      </ul>
+
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a href="/">News</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Coding Tutorials<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/">Technology</a></li>
+        <li><a href="/">Online Business</a></li>
       </ul>
     </div>
   </nav>

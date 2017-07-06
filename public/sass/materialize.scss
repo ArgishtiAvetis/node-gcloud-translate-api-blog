@@ -42,3 +42,57 @@
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
 
+
+body {
+	background: #e9eff3;
+}
+
+.row-padding {
+	margin: 50px 0;
+}
+
+nav a {
+	color: #01579b; /* light-blue darken-4 */
+}
+
+nav ul a {
+	color: #01579b; /* light-blue darken-4 */
+}
+
+.button-collapse {
+	color: #01579b; /* light-blue darken-4 */
+}
+
+.brand-logo img {
+	width: 275px;
+}
+
+@media screen and (max-width: 700px) {
+	.side-nav {
+		width: 200px;
+	}
+
+	.brand-logo {
+		margin-top: 10px;
+	}
+
+	.brand-logo img {
+		width: 200px;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+	.side-nav {
+		width: 150px;
+	}
+
+	.brand-logo {
+		float: right;
+		margin-top: 10px;
+	}
+
+	.brand-logo img {
+		width: 150px;
+	}
+}
