@@ -6812,7 +6812,7 @@ nav ul a {
 
 @media screen and (max-width: 700px) {
   .side-nav {
-    width: 200px; }
+    width: 250px; }
 
   .brand-logo {
     margin-top: 10px; }
@@ -6821,7 +6821,7 @@ nav ul a {
     width: 200px; } }
 @media screen and (max-width: 400px) {
   .side-nav {
-    width: 200px; }
+    width: 225px; }
 
   .brand-logo {
     float: right;
