@@ -1,11 +1,77 @@
 <% include partials/header.ejs %>
 
-	<h1>Add post</h1>
 	
-	<form action="/add-post" method="post">
+<!-- 	<form action="/add-post" method="post">
 		<input type="text" name="title" /><br />
 		<textarea name="body" rows="4"></textarea><br />
 		<button type="submit">Add post</button>
-	</form>
+	</form> -->
+
+<div class="container">
+	<div class="row row-padding" style="background: white; padding: 55px">
+		<h1>Add post</h1>
+		<form action="/add-post" method="post" class="col s12">
+			<div class="row">
+		        <div class="input-field col s6">
+		          <input id="title" name="title" type="text" class="validate">
+		          <label for="title">Title</label>
+		        </div>
+		        <div class="input-field col s6">
+		          <input id="overview" name="overview" type="text" class="validate">
+		          <label for="overview">Overview</label>
+		        </div>
+		    </div>
+		    <div class="row">
+			  <div class="input-field col s6">
+			    <select>
+			    	<option value="" disabled selected>Pick a Category</option>
+				    <optgroup label="Non-coding">
+				    	<option value="">NEWS</option>
+				      	<option value="">Technology</option>
+				      	<option value="online-business">Online Business</option>	
+				    </optgroup>
+				    <optgroup label="Coding">
+				      <option value="">HTML</option>
+				      <option value="">CSS</option>
+				      <option value="">SASS</option>
+				      <option value="">BOOTSTRAP</option>
+				      <option value="">C</option>
+				      <option value="">JS</option>
+				      <option value="">ReactJS</option>
+				      <option value="">NodeJS</option>
+				      <option value="">Socket.IO</option>
+				      <option value="">PHP</option>
+				      <option value="">MySQL</option>
+				      <option value="">Laravel</option>			    	
+				    </optgroup> 
+			    </select>
+			    <label>Materialize Select</label>
+			  </div>
+			  <div class="col s6 file-field input-field">
+			      <div class="btn">
+			        <span>File</span>
+			        <input type="file" name="img0">
+			      </div>
+			      <div class="file-path-wrapper">
+			        <input class="file-path validate" name="img0_path" type="text">
+			      </div>
+			  </div>
+		    </div>
+		    <div class="row">
+		        <div class="input-field col s12">
+		         	<textarea id="body" class="materialize-textarea" name="body"></textarea>
+         			<label for="body">Body</label>
+		        </div>
+		    </div>
+		    <div class="row">
+		    	<div class="col s12">	    		
+				    <button class="btn waves-effect waves-light" type="submit" name="action">Publish
+				    	<i class="material-icons right">send</i>
+				  	</button>
+		    	</div>
+		    </div>
+		</form>
+	</div>
+</div>
 
 <% include partials/footer.ejs %>
