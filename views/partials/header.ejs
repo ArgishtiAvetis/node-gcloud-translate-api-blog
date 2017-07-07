@@ -14,11 +14,48 @@
         <img src="https://static1.squarespace.com/static/57764ef78419c2a6d6ac5ace/t/5915f68e725e25353cf564ce/1494611603680/the+guardian.jpg" style="margin-top: 0px"  alt="" class="">
       </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      <% if (lang == '') { %>
+
       <ul class="right hide-on-med-and-down">
         <li><a href="/">News</a></li>
         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Coding Tutorials<i class="material-icons right">arrow_drop_down</i></a></li>
         <li><a href="/">Technology</a></li>
         <li><a href="/">Online Business</a></li>
+      
+
+      <% } %>
+      
+      <% if (lang == 'ru') { %>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Новости</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Туториали по Программированию<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/">Технологии</a></li>
+        <li><a href="/">Интернет-бизнес</a></li>
+      
+
+      <% } %>
+
+      <% if (lang == 'hi') { %>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">समाचार</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">प्रोग्रामिंग ट्यूटोरियल<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/">प्रौद्योगिकी</a></li>
+        <li><a href="/">ऑनलाइन कारोबार</a></li>
+      
+
+      <% } %>
+
+        <li><a class="dropdown-button" href="#" data-activates="change-lang">Change Language<i class="material-icons right">arrow_drop_down</i></a></li>
+
+      </ul>
+
+      <ul id="change-lang" class="dropdown-content">
+        <li><a href="/">English</a></li>
+        <li><a href="/ru">Russian</a></li>
+        <li><a href="/hi">Hindi</a></li>
       </ul>
 
       <!-- Dropdown Structure -->
