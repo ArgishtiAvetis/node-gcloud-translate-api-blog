@@ -6790,8 +6790,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   /*shape-rendering: crispEdges;*/ }
 
 body {
-  background: white;
-  /*#e9eff3;*/ }
+  background: #e9eff3; }
 
 .row-padding {
   margin: 50px 0; }
