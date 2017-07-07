@@ -1,21 +1,102 @@
 <% include partials/header.ejs %>
 
-	<img class="materialboxed" width="650" src="http://materializecss.com/images/sample-1.jpg">
+	<div class="row">
+		<div class="col s12 m12 l8">
+			<img class="materialboxed responsive-img post-image" src="http://www.4invests.com/en/wp-content/uploads/2016/11/web-1668927_1280.jpg">
 
-	<% if(lang == '') { %>
-		<h1><%= post.title %></h1>
-		<p><%= post.body %></p>
-	<% } %>
+		<% if(lang == '') { %>
+			<h1 class="post-title"><%= post.title %></h1>
+			<p class="post-body"><%= post.body %></p>
+		<% } %>
 
-	<% if(lang == 'ru') { %>
-		<h1><%= post.title_ru %></h1>
-		<p><%= post.body_ru %></p>
-	<% } %>
+		<% if(lang == 'ru') { %>
+			<h1 class="post-title"><%= post.title_ru %></h1>
+			<p class="post-body"><%= post.body_ru %></p>
+		<% } %>
 
-	<% if(lang == 'hi') { %>
-		<h1><%= post.title_hi %></h1>
-		<p><%= post.body_hi %></p>
-	<% } %>
+		<% if(lang == 'hi') { %>
+			<h1 class="post-title"><%= post.title_hi %></h1>
+			<p class="post-body"><%= post.body_hi %></p>
+		<% } %>
+
+		</div>
+		<div class="col s12 m12 l4">
+
+		<% for(let n = 0, similar = similarPosts, len = similarPosts.length; n < len; n++ ) { %>
+			<div class="card">
+	            <a href="
+	            <%= lang %>/p/<%= similar[n].slug %>"><div class="card-image">
+	              <img src="http://materializecss.com/images/sample-1.jpg">
+	            
+	              <% if (lang == '') { %>
+	              <span class="card-title"><%= similar[n].title %></span>
+	              <% } %>
+	              <% if (lang == 'ru') { %>
+	              <span class="card-title"><%= similar[n].title_ru %></span>
+	              <% } %>
+	              <% if (lang == 'hi') { %>
+	              <span class="card-title"><%= similar[n].title_hi %></span>
+	              <% } %>
+	              
+	            
+
+	            </div></a>
+	            <div class="card-content">
+	              <% if (lang == '') { %>
+	              <p class="card-content"><%= similar[n].body.substr(0, 100) %>...</p>
+	              <% } %>
+	              <% if (lang == 'ru') { %>
+	              <p class="card-content"><%= similar[n].body_ru.substr(0, 100) %>...</p>
+	              <% } %>
+	              <% if (lang == 'hi') { %>
+	              <p class="card-content"><%= similar[n].body_hi.substr(0, 100) %>...</p>
+	              <% } %>
+	            </div>
+	            <div class="card-action right-align">
+	              <!-- <a href="/p/<%= similar[n].slug %>">Continue Reading</a> -->
+	               <div class="chip">
+				    #Tag
+				  </div>
+				  <div class="chip">
+				    #Tag
+				  </div>	
+				  <div class="chip">
+				    #Tag
+				  </div>	
+        
+	            </div>
+	          </div>
+		<% } %>
+        
+
+
+			<span class="post-page-cats">Non-coding Categories</span>
+			<ul class="collection center-align">
+		      	<li class="collection-item"><a href="/">News</a></li>
+		      	<li class="collection-item"><a href="/">Technology</a></li>
+		      	<li class="collection-item"><a href="/">Online Business</a></li>
+		    </ul>
+		    <span class="post-page-cats">Front-end Technologies</span>
+		    <ul class="collection center-align">
+		      	<li class="collection-item"><a href="/">HTML</a></li>
+		      	<li class="collection-item"><a href="/">CSS</a></li>
+		      	<li class="collection-item"><a href="/">SASS</a></li>
+		      	<li class="collection-item"><a href="/">BOOTSTRAP</a></li>
+		      	<li class="collection-item"><a href="/">JAVASCRIPT</a></li>
+		      	<li class="collection-item"><a href="/">REACT</a></li>
+		    </ul>
+		    <span class="post-page-cats">Back-end Technologies</span>
+		    <ul class="collection center-align">
+		      	<li class="collection-item"><a href="/">C</a></li>
+		      	<li class="collection-item"><a href="/">NodeJS - ExpressJS</a></li>
+		      	<li class="collection-item"><a href="/">Socket.IO</a></li>
+		      	<li class="collection-item"><a href="/">PHP</a></li>
+		      	<li class="collection-item"><a href="/">LARAVEL</a></li>
+		      	<li class="collection-item"><a href="/">MySQL</a></li>
+		    </ul>
+         
+		</div>
+	</div>
 
 	
 	

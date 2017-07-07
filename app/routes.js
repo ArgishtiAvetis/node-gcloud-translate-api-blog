@@ -74,11 +74,24 @@ module.exports = function(app, Post) {
 			if (err) {
 				console.log(err);
 			} else {
-				res.render('post', {
-					post: post,
-					lang: lang,
-					page: `/p/${post.slug}`
-				});
+
+				Post.find({
+					category: post.category,
+					_id: {
+						$ne: post._id
+					}
+				}).limit(2).exec((err, similarPosts) => {
+					if (err) {
+						console.log(err);
+					} else {
+						res.render('post', {
+							post: post,
+							similarPosts: similarPosts,
+							lang: lang,
+							page: `/p/${post.slug}`
+						});
+					}
+				})
 			}
 		});		
 
