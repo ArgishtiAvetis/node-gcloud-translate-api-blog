@@ -17,7 +17,8 @@ module.exports = function(app, Post) {
 				//console.log(posts);
 				res.render('index', {
 					posts: posts,
-					lang: l
+					lang: l,
+					page: ''
 				});
 			}
 		});
@@ -38,7 +39,8 @@ module.exports = function(app, Post) {
 				//console.log(posts);
 				res.render('index', {
 					posts: posts,
-					lang: ''
+					lang: '',
+					page: ''
 				});
 			}
 		});
@@ -61,7 +63,10 @@ module.exports = function(app, Post) {
 		});
 	});
 
-	app.get('/p/:slug', (req, res) => {
+	app.get('/:lang?/p/:slug', (req, res) => {
+
+		var slug = req.params.slug;
+		var lang = req.params.lang ? req.params.lang : '';
 
 		Post.findOne({
 			slug: req.params.slug
@@ -71,7 +76,8 @@ module.exports = function(app, Post) {
 			} else {
 				res.render('post', {
 					post: post,
-					lang: ''
+					lang: lang,
+					page: `/p/${post.slug}`
 				});
 			}
 		});		
@@ -86,9 +92,10 @@ module.exports = function(app, Post) {
 	});
 	
 
-	app.get('/pupsik/admin', (req, res) => {
+	app.get('/:lang?/pupsik/admin', (req, res) => {
 		res.render('admin', {
-			lang: ''
+			lang: '',
+			page: '/pupsik/admin'
 		});
 	});
 

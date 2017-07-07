@@ -2,7 +2,21 @@
 
 	<img class="materialboxed" width="650" src="http://materializecss.com/images/sample-1.jpg">
 
-	<h1><%= post.title %></h1>
-	<p><%= post.body %></p>
+	<% if(lang == '') { %>
+		<h1><%= post.title %></h1>
+		<p><%= post.body %></p>
+	<% } %>
+
+	<% if(lang == 'ru') { %>
+		<h1><%= post.title_ru %></h1>
+		<p><%= post.body_ru %></p>
+	<% } %>
+
+	<% if(lang == 'hi') { %>
+		<h1><%= post.title_hi %></h1>
+		<p><%= post.body_hi %></p>
+	<% } %>
+
+	
 	
 <% include partials/footer.ejs %>
