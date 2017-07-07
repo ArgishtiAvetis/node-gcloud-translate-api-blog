@@ -6819,11 +6819,15 @@ nav ul a {
 
   .brand-logo img {
     width: 200px; } }
+.post-row {
+  margin-top: 20px; }
+
 .post-image {
   width: 100%;
   height: 350px; }
 
 .post-title {
+  margin-top: 0;
   font-size: 40px; }
 
 .post-body {
@@ -6831,6 +6835,10 @@ nav ul a {
 
 .post-page-cats {
   font-size: 25px; }
+
+.post-content {
+  background: white;
+  padding: 0px 35px 25px 35px; }
 
 @media screen and (max-width: 400px) {
   .side-nav {
