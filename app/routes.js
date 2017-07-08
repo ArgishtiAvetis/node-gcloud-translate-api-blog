@@ -132,9 +132,9 @@ const t3 = 'es';  // spanish
 				title_hi: title_hi,
 				title_es: title_es,
 				body: body.trim(),
-				body_ru: body_ru,
-				body_hi: body_hi,
-				body_es: body_es,
+				body_ru: body_ru.trim().replace(/(<\/ )/g, "<\/"),
+				body_hi: body_hi.trim().replace(/(<\/ )/g, "<\/"),
+				body_es: body_es.trim().replace(/(<\/ )/g, "<\/"),
 				slug: title.trim().replace(/\s+/g, "-")
 			});
 			newPost.save((err, newPost) => {

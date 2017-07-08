@@ -9,22 +9,22 @@
 			<div class="post-content">
 				<% if(lang == '') { %>
 					<h1 class="post-title"><%= post.title %></h1>
-					<p class="post-body"><%- post.body %></p>
+					<div class="post-body"><%- post.body %></div>
 				<% } %>
 
 				<% if(lang == 'ru') { %>
 					<h1 class="post-title"><%= post.title_ru %></h1>
-					<p class="post-body"><%- post.body_ru %></p>
+					<div class="post-body"><%- post.body_ru %></div>
 				<% } %>
 
 				<% if(lang == 'hi') { %>
 					<h1 class="post-title"><%= post.title_hi %></h1>
-					<p class="post-body"><%- post.body_hi %></p>
+					<div class="post-body"><%- post.body_hi %></div>
 				<% } %>
 
 				<% if(lang == 'es') { %>
 					<h1 class="post-title"><%= post.title_es %></h1>
-					<p class="post-body"><%- post.body_es %></p>
+					<div class="post-body"><%- post.body_es %></div>
 				<% } %>
 			</div>
 		</div>
