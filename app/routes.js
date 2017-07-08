@@ -50,6 +50,13 @@ module.exports = function(app, Post) {
 	});
 
 	app.get('/blog/:category', (req, res) => {
+
+		var category = req.params.category;
+
+		Post.find({
+			category: category
+		})
+
 		res.render('category', {
 			category: req.params.category,
 			lang: ''
