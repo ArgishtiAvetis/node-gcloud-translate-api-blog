@@ -115,6 +115,7 @@ module.exports = function(app, Post) {
 
 const t1 = 'ru';  // russian
 const t2 = 'hi';  // hindi
+const t3 = 'es';  // spanish
 
 
 	app.post('/add-post', (req, res) => {
@@ -124,14 +125,16 @@ const t2 = 'hi';  // hindi
 
 		var text = [title, body];
 
-		var savePost = (title_ru, body_ru, title_hi, body_hi) => {
+		var savePost = (title_ru, body_ru, title_hi, body_hi, title_es, body_es) => {
 			var newPost = new Post({
 				title: title.trim(),
 				title_ru: title_ru,
 				title_hi: title_hi,
+				title_es: title_es,
 				body: body.trim(),
 				body_ru: body_ru,
 				body_hi: body_hi,
+				body_es: body_es,
 				slug: title.trim().replace(/\s+/g, "-")
 			});
 			newPost.save((err, newPost) => {
@@ -147,6 +150,7 @@ const t2 = 'hi';  // hindi
 
 			var r_text = [];
 			var h_text = [];
+			var e_text = [];
 
 			translate.translate(text, t1)
 		    .then((russian) => {
@@ -172,12 +176,27 @@ const t2 = 'hi';  // hindi
 			      		h_text.push(translation);
 					});
 
-					callback(r_text[0], r_text[1], h_text[0], h_text[1]);
+					translate.translate(text, t3)
+					.then((spanish) => {
+						let es = spanish[0];
+					    es = Array.isArray(hi) ? es : [es];
+
+					    console.log('Translations:');
+
+						es.forEach((translation, i) => {
+				      		console.log(`${text[i]} => (${t2}) ${translation}`);
+				      		e_text.push(translation);
+						});
+						
+
+					callback(r_text[0], r_text[1], h_text[0], h_text[1], e_text[0], e_text[1]);
 					
+					})
+					.catch((err) => {
+				      console.error('ERROR:', err);
+				    });
+
 				})
-				.catch((err) => {
-			      console.error('ERROR:', err);
-			    });
 
 			})
 			.catch((err) => {

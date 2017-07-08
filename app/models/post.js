@@ -8,6 +8,7 @@ var postSchema = mongoose.Schema({
 
   title_ru: String,
   title_hi: String,
+  title_es: String,
 
   overview: String,
   body: String,
@@ -16,6 +17,7 @@ var postSchema = mongoose.Schema({
 
   body_ru: String,
   body_hi: String,
+  body_es: String,
 
   img0: String,
   author: String,

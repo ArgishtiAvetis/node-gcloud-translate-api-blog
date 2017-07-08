@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="/css/materialize.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
 
@@ -49,6 +50,17 @@
 
       <% } %>
 
+      <% if (lang == 'es') { %>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Noticias</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Tutoriales de Programación<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/">Tecnología</a></li>
+        <li><a href="/">Negocios en Línea</a></li>
+      
+
+      <% } %>
+
         <li><a class="dropdown-button" href="#" data-activates="change-lang">Change Language<i class="material-icons right">arrow_drop_down</i></a></li>
 
       </ul>
@@ -57,12 +69,14 @@
         <li><a href="<%= page %>"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1280px-Flag_of_the_United_Kingdom.svg.png" alt="flag" width="30px" style="margin-top: 5px"> English</a></li>
         <li><a href="/ru<%= page %>"><img src="https://upload.wikimedia.org/wikipedia/en/archive/f/f3/20120812153730%21Flag_of_Russia.svg" alt="flag" width="30px" style="margin-top: 5px"> Russian</a></li>
         <li><a href="/hi<%= page %>"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/255px-Flag_of_India.svg.png" alt="flag" width="30px" style="margin-top: 5px"> Hindi</a></li>
+        <li><a href="/es<%= page %>"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png" alt="flag" width="30px" style="margin-top: 5px"> Spanish</a></li>
       </ul>
 
       <ul id="change-lang-mobile" class="dropdown-content">
         <li><a href="<%= page %>"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1280px-Flag_of_the_United_Kingdom.svg.png" alt="flag" width="30px" style="margin-top: 5px"> English</a></li>
         <li><a href="/ru<%= page %>"><img src="https://upload.wikimedia.org/wikipedia/en/archive/f/f3/20120812153730%21Flag_of_Russia.svg" alt="flag" width="30px" style="margin-top: 5px"> Russian</a></li>
         <li><a href="/hi<%= page %>"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/255px-Flag_of_India.svg.png" alt="flag" width="30px" style="margin-top: 5px"> Hindi</a></li>
+        <li><a href="/es<%= page %>"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png" alt="flag" width="30px" style="margin-top: 5px"> Spanish</a></li>
       </ul>
 
       <!-- Dropdown Structure -->
@@ -98,14 +112,57 @@
         <li><a href="/">Laravel</a></li>
         <li><a href="/">MySQL</a></li>
       </ul>
+
+
+      <% if (lang == '') { %>
+
       <ul class="side-nav" id="mobile-demo">
         <li><a href="/">News</a></li>
         <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Coding Tutorials<i class="material-icons right">arrow_drop_down</i></a></li>
         <li><a href="/">Technology</a></li>
         <li><a href="/">Online Business</a></li>
-        <li><a class="dropdown-button" href="#" data-activates="change-lang-mobile">Language<i class="material-icons right">arrow_drop_down</i></a></li>
       
+
+      <% } %>
+      
+      <% if (lang == 'ru') { %>
+
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="/">Новости</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Туториали<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/">Технологии</a></li>
+        <li><a href="/">Интернет-бизнес</a></li>
+      
+
+      <% } %>
+
+      <% if (lang == 'hi') { %>
+
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="/">समाचार</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">प्रोग्रामिंग ट्यूटोरियल<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/">प्रौद्योगिकी</a></li>
+        <li><a href="/">ऑनलाइन कारोबार</a></li>
+      
+
+      <% } %>
+
+      <% if (lang == 'es') { %>
+
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="/">Noticias</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Tutoriales<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="/">Tecnología</a></li>
+        <li><a href="/">Negocios en Línea</a></li>
+      
+
+      <% } %>
+
+        <li><a class="dropdown-button" href="#" data-activates="change-lang-mobile">Language<i class="material-icons right">arrow_drop_down</i></a></li>
+
       </ul>
+
+
     </div>
   </nav>
 </div>

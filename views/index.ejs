@@ -17,6 +17,9 @@
 	              <% if (lang == 'hi') { %>
 	              <span class="card-title"><%= posts[i].title_hi %></span>
 	              <% } %>
+	              <% if (lang == 'es') { %>
+	              <span class="card-title"><%= posts[i].title_es %></span>
+	              <% } %>
 	              
 	            
 
@@ -30,6 +33,9 @@
 	              <% } %>
 	              <% if (lang == 'hi') { %>
 	              <p class="card-content"><%= posts[i].body_hi.substr(0, 100) %>...</p>
+	              <% } %>
+	              <% if (lang == 'es') { %>
+	              <p class="card-content"><%= posts[i].body_es.substr(0, 100) %>...</p>
 	              <% } %>
 	            </div>
 	            <div class="card-action right-align">

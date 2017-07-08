@@ -1,8 +1,11 @@
 <% include partials/header.ejs %>
 
 	<div class="row post-row">
+		<div class="col s12 post-image-col">
+			<img class="materialboxed responsive-img post-image" src="http://www.4invests.com/en/wp-content/uploads/2016/11/web-1668927_1280.jpg" />
+		</div>
+
 		<div class="col s12 m12 l8">
-			<img class="materialboxed responsive-img post-image" src="http://www.4invests.com/en/wp-content/uploads/2016/11/web-1668927_1280.jpg">
 			<div class="post-content">
 				<% if(lang == '') { %>
 					<h1 class="post-title"><%= post.title %></h1>
@@ -18,9 +21,41 @@
 					<h1 class="post-title"><%= post.title_hi %></h1>
 					<p class="post-body"><%= post.body_hi %></p>
 				<% } %>
+
+				<% if(lang == 'es') { %>
+					<h1 class="post-title"><%= post.title_es %></h1>
+					<p class="post-body"><%= post.body_es %></p>
+				<% } %>
 			</div>
 		</div>
 		<div class="col s12 m12 l4">
+       
+
+			<span class="post-page-cats">Non-coding Categories</span>
+			<ul class="collection center-align">
+		      	<li class="collection-item"><a href="/">News</a></li>
+		      	<li class="collection-item"><a href="/">Technology</a></li>
+		      	<li class="collection-item"><a href="/">Online Business</a></li>
+		    </ul>
+		    <span class="post-page-cats">Front-end Technologies</span>
+		    <ul class="collection center-align">
+		      	<li class="collection-item"><a href="/">HTML</a></li>
+		      	<li class="collection-item"><a href="/">CSS</a></li>
+		      	<li class="collection-item"><a href="/">SASS</a></li>
+		      	<li class="collection-item"><a href="/">BOOTSTRAP</a></li>
+		      	<li class="collection-item"><a href="/">JAVASCRIPT</a></li>
+		      	<li class="collection-item"><a href="/">REACT</a></li>
+		    </ul>
+		    <span class="post-page-cats">Back-end Technologies</span>
+		    <ul class="collection center-align">
+		      	<li class="collection-item"><a href="/">C</a></li>
+		      	<li class="collection-item"><a href="/">NodeJS - ExpressJS</a></li>
+		      	<li class="collection-item"><a href="/">Socket.IO</a></li>
+		      	<li class="collection-item"><a href="/">PHP</a></li>
+		      	<li class="collection-item"><a href="/">LARAVEL</a></li>
+		      	<li class="collection-item"><a href="/">MySQL</a></li>
+		    </ul>
+         
 
 		<% for(let n = 0, similar = similarPosts, len = similarPosts.length; n < len; n++ ) { %>
 			<div class="card">
@@ -36,6 +71,9 @@
 	              <% } %>
 	              <% if (lang == 'hi') { %>
 	              <span class="card-title"><%= similar[n].title_hi %></span>
+	              <% } %>
+	              <% if (lang == 'es') { %>
+	              <span class="card-title"><%= similar[n].title_es %></span>
 	              <% } %>
 	              
 	            
@@ -67,34 +105,7 @@
 	            </div>
 	          </div>
 		<% } %>
-        
 
-
-			<span class="post-page-cats">Non-coding Categories</span>
-			<ul class="collection center-align">
-		      	<li class="collection-item"><a href="/">News</a></li>
-		      	<li class="collection-item"><a href="/">Technology</a></li>
-		      	<li class="collection-item"><a href="/">Online Business</a></li>
-		    </ul>
-		    <span class="post-page-cats">Front-end Technologies</span>
-		    <ul class="collection center-align">
-		      	<li class="collection-item"><a href="/">HTML</a></li>
-		      	<li class="collection-item"><a href="/">CSS</a></li>
-		      	<li class="collection-item"><a href="/">SASS</a></li>
-		      	<li class="collection-item"><a href="/">BOOTSTRAP</a></li>
-		      	<li class="collection-item"><a href="/">JAVASCRIPT</a></li>
-		      	<li class="collection-item"><a href="/">REACT</a></li>
-		    </ul>
-		    <span class="post-page-cats">Back-end Technologies</span>
-		    <ul class="collection center-align">
-		      	<li class="collection-item"><a href="/">C</a></li>
-		      	<li class="collection-item"><a href="/">NodeJS - ExpressJS</a></li>
-		      	<li class="collection-item"><a href="/">Socket.IO</a></li>
-		      	<li class="collection-item"><a href="/">PHP</a></li>
-		      	<li class="collection-item"><a href="/">LARAVEL</a></li>
-		      	<li class="collection-item"><a href="/">MySQL</a></li>
-		    </ul>
-         
 		</div>
 	</div>
 
