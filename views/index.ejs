@@ -26,16 +26,16 @@
 	            </div></a>
 	            <div class="card-content">
 	              <% if (lang == '') { %>
-	              <p class="card-content"><%= posts[i].body.substr(0, 100) %>...</p>
+	              <p class="card-content"><%- posts[i].body.substr(0, 100) %>...</p>
 	              <% } %>
 	              <% if (lang == 'ru') { %>
-	              <p class="card-content"><%= posts[i].body_ru.substr(0, 100) %>...</p>
+	              <p class="card-content"><%- posts[i].body_ru.substr(0, 100) %>...</p>
 	              <% } %>
 	              <% if (lang == 'hi') { %>
-	              <p class="card-content"><%= posts[i].body_hi.substr(0, 100) %>...</p>
+	              <p class="card-content"><%- posts[i].body_hi.substr(0, 100) %>...</p>
 	              <% } %>
 	              <% if (lang == 'es') { %>
-	              <p class="card-content"><%= posts[i].body_es.substr(0, 100) %>...</p>
+	              <p class="card-content"><%- posts[i].body_es.substr(0, 100) %>...</p>
 	              <% } %>
 	            </div>
 	            <div class="card-action right-align">

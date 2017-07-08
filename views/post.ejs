@@ -9,22 +9,22 @@
 			<div class="post-content">
 				<% if(lang == '') { %>
 					<h1 class="post-title"><%= post.title %></h1>
-					<p class="post-body"><%= post.body %></p>
+					<p class="post-body"><%- post.body %></p>
 				<% } %>
 
 				<% if(lang == 'ru') { %>
 					<h1 class="post-title"><%= post.title_ru %></h1>
-					<p class="post-body"><%= post.body_ru %></p>
+					<p class="post-body"><%- post.body_ru %></p>
 				<% } %>
 
 				<% if(lang == 'hi') { %>
 					<h1 class="post-title"><%= post.title_hi %></h1>
-					<p class="post-body"><%= post.body_hi %></p>
+					<p class="post-body"><%- post.body_hi %></p>
 				<% } %>
 
 				<% if(lang == 'es') { %>
 					<h1 class="post-title"><%= post.title_es %></h1>
-					<p class="post-body"><%= post.body_es %></p>
+					<p class="post-body"><%- post.body_es %></p>
 				<% } %>
 			</div>
 		</div>
@@ -81,13 +81,13 @@
 	            </div></a>
 	            <div class="card-content">
 	              <% if (lang == '') { %>
-	              <p class="card-content"><%= similar[n].body.substr(0, 100) %>...</p>
+	              <p class="card-content"><%- similar[n].body.substr(0, 100) %>...</p>
 	              <% } %>
 	              <% if (lang == 'ru') { %>
-	              <p class="card-content"><%= similar[n].body_ru.substr(0, 100) %>...</p>
+	              <p class="card-content"><%- similar[n].body_ru.substr(0, 100) %>...</p>
 	              <% } %>
 	              <% if (lang == 'hi') { %>
-	              <p class="card-content"><%= similar[n].body_hi.substr(0, 100) %>...</p>
+	              <p class="card-content"><%- similar[n].body_hi.substr(0, 100) %>...</p>
 	              <% } %>
 	            </div>
 	            <div class="card-action right-align">
